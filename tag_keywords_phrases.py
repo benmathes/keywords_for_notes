@@ -72,5 +72,5 @@ parser = argparse.ArgumentParser()
 parser.add_argument('directory', type=str, nargs='+', help='the root directory to start in')
 args = parser.parse_args()
 directory = args.directory[0]
-import pdb; pdb.set_trace()
+
 dir_map('/Users/benmathes/Dropbox/notes/', directory)
