@@ -1,8 +1,10 @@
 import os
 import pke
+import argparse
 
 
 def dir_map(dir_path, func):
+    """ recursively maps func over a directory"""
     result = {}
     for directory_name, subdirectory_list, file_list in os.walk(dir_path):
         print(f'labeling keyphrases in {directory_name}:')
@@ -20,6 +22,9 @@ def keyphrases_from_file(filepath):
     """
     uses pke to extract the top words/phrases
     from a given file.
+
+    TODO: read in an entire directory and extract the top phrases
+    from the entire corpuse
     """
 
     extractor = pke.unsupervised.TopicRank()
@@ -62,4 +67,10 @@ def tag_keyphrases(filepath):
 
 
 
-dir_map('/Users/benmathes/Dropbox/notes/', tag_keyphrases)
+
+parser = argparse.ArgumentParser()
+parser.add_argument('directory', type=str, nargs='+', help='the root directory to start in')
+args = parser.parse_args()
+directory = args.directory[0]
+import pdb; pdb.set_trace()
+dir_map('/Users/benmathes/Dropbox/notes/', directory)
