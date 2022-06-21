@@ -15,7 +15,7 @@ joblib==0.13.2
 murmurhash==1.0.2
 networkx==2.3
 nltk==3.4.5
-numpy==1.17.1
+numpy==1.22.0
 parso==0.5.1
 pexpect==4.7.0
 pickleshare==0.7.5
