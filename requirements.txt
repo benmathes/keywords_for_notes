@@ -11,7 +11,7 @@ idna==2.8
 ipython==7.8.0
 ipython-genutils==0.2.0
 jedi==0.15.1
-joblib==0.13.2
+joblib==1.2.0
 murmurhash==1.0.2
 networkx==2.3
 nltk==3.4.5
